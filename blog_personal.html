@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gloss & Glam – SPA</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --bg: #1a0f13;
+            --bg-light: #241418;
+            --text: #f5e9ec;
+            --gold: #b43f4e;
+            --border: #5a2d35;
+            --radius: 14px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        /* HEADER */
+        header {
+            width: 100%;
+            padding: 25px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--bg);
+        }
+
+        header .logo {
+            font-size: 1.6rem;
+            font-weight: 600;
+            font-family: "Playfair Display", serif;
+            color: var(--gold);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            padding: 10px 22px;
+            border-radius: var(--radius);
+            color: #000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            background: var(--bg-light);
+        }
+
+        .hero h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 3rem;
+            color: var(--gold);
+        }
+
+        .hero p {
+            margin-top: 10px;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        /* SERVICES GRID */
+        .services-section {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .services-title {
+            font-family: "Playfair Display", serif;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .services-grid {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            padding: 0 100px;
+        }
+
+        .service-card {
+            border: 1px solid var(--border);
+            padding: 35px 20px;
+            border-radius: var(--radius);
+            text-align: center;
+        }
+
+        .service-card img {
+            width: 55px;
+            margin-bottom: 15px;
+        }
+
+        /* PACKAGES */
+        .packages {
+            padding: 80px 20px;
+            text-align: center;
+            background: var(--bg-light);
+        }
+
+        .packages-grid {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 0 100px;
+        }
+
+        .package-card {
+            border: 1px solid var(--border);
+            padding: 35px 25px;
+            border-radius: var(--radius);
+        }
+
+        .price {
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 15px;
+            font-family: "Playfair Display", serif;
+        }
+
+        .package-card ul {
+            margin: 20px 0;
+            text-align: left;
+            line-height: 1.9;
+        }
+
+        /* APPOINTMENT */
+        .appointment {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .appointment-form {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input,
+        select {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            padding: 14px;
+            border-radius: var(--radius);
+            color: var(--text);
+        }
+
+        /* NEWSLETTER */
+        .newsletter {
+            background: var(--bg-light);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .newsletter input {
+            width: 350px;
+            margin-right: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0a0a0a;
+            padding: 60px 60px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        footer h3 {
+            color: var(--gold);
+            font-family: "Playfair Display", serif;
+            margin-bottom: 15px;
+        }
+
+        footer ul {
+            list-style: none;
+            line-height: 2;
+        }
+
+        footer ul li {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Gloss & Glam</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#packages">Packages</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="btn-gold">Book Now</a>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Services</h1>
+        <p>Choose the experience that suits you</p>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="services-section" id="services">
+        <h2 class="services-title">Our Services</h2>
+        <p>Premium treatments tailored for your unique style</p>
+
+        <div class="services-grid">
+            <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/5231/5231052.png" />
+                <p>Hair Cut</p>
+            </div>
+            <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/9516/9516927.png" />
+                <p>Shaving</p>
+            </div>
+            <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/994/994928.png" />
+                <p>Hair Dye</p>
+            </div>
+            <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/706/706807.png" />
+                <p>Facial</p>
+            </div>
+            <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/3040/3040703.png" />
+                <p>Keratine</p>
+            </div>
+            <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/5639/5639722.png" />
+                <p>Hair Removal</p>
+            </div>
+            <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/892/892458.png" />
+                <p>Hair Treatment</p>
+            </div>
+            <div class="service-card"><img src="https://cdn-icons-png.flaticon.com/512/4201/4201098.png" />
+                <p>Wedding Package</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="packages" id="packages">
+        <h2 class="services-title">Our Packages</h2>
+
+        <div class="packages-grid">
+            <div class="package-card">
+                <h3>Grooming Package</h3>
+                <div class="price">$459</div>
+                <ul>
+                    <li>Basic Haircut</li>
+                    <li>Beard Trim</li>
+                    <li>Hair Styling</li>
+                </ul>
+                <a class="btn-gold" href="#">Choose Plan</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Grooming Package</h3>
+                <div class="price">$639</div>
+                <ul>
+                    <li>Haircut + Beard</li>
+                    <li>Hot Towel</li>
+                    <li>Massage</li>
+                </ul>
+                <a class="btn-gold" href="#">Choose Plan</a>
+            </div>
+
+            <div class="package-card">
+                <h3>Wedding Package</h3>
+                <div class="price">$819</div>
+                <ul>
+                    <li>Full Grooming</li>
+                    <li>Hair Color</li>
+                    <li>Spa Facial</li>
+                </ul>
+                <a class="btn-gold" href="#">Choose Plan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPOINTMENT -->
+    <section class="appointment" id="contact">
+        <h2 class="services-title">Make an Appointment</h2>
+        <p>Select the date and time that best suits you</p>
+
+        <form class="appointment-form">
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email Address" />
+            <select>
+                <option>Select Service</option>
+                <option>Haircut</option>
+                <option>Shaving</option>
+                <option>Facial</option>
+            </select>
+            <button class="btn-gold" type="submit">Book Appointment</button>
+        </form>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <h2 class="services-title">Stay Updated</h2>
+        <p>Subscribe to receive the latest offers</p>
+        <br />
+        <input type="email" placeholder="Enter your email" />
+        <a class="btn-gold" href="#">Sign Up</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div>
+            <h3>Gloss & Glam</h3>
+            <ul>
+                <li>Luxury grooming & beauty</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Services</h3>
+            <ul>
+                <li>Haircut</li>
+                <li>Shaving</li>
+                <li>Facial</li>
+                <li>Treatments</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Support</h3>
+            <ul>
+                <li>FAQ</li>
+                <li>Help Center</li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <ul>
+                <li>xxxx@gmail.com</li>
+                <li>+54 xxxxxxxxx</li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
+
+</html>
